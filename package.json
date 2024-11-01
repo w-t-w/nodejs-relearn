@@ -4,6 +4,8 @@
   "description": "nodejs-relearn",
   "main": "index.js",
   "scripts": {
+    "desc": "node ./stage/desc/index.js",
+    "game": "node ./stage/game/index.js"
   },
   "keywords": ["nodejs"],
   "author": "wtw",
