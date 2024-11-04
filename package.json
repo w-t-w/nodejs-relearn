@@ -9,7 +9,8 @@
     "specification": "node ./stage/specification/index.js",
     "game-specification": "node ./stage/game-specification/index.js",
     "blockingIO": "node stage/nonBlockingIO/blockIO.js",
-    "nonBlockingIO": "node stage/nonBlockingIO/nonBlockIO.js"
+    "nonBlockingIO": "node stage/nonBlockingIO/nonBlockIO.js",
+    "callback": "node stage/callback/index.js"
   },
   "keywords": [
     "nodejs"
