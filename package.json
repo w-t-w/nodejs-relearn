@@ -7,9 +7,16 @@
     "desc": "node ./stage/desc/index.js",
     "game": "node ./stage/game/index.js",
     "specification": "node ./stage/specification/index.js",
-    "game-specification": "node ./stage/game-specification/index.js"
+    "game-specification": "node ./stage/game-specification/index.js",
+    "blockingIO": "node stage/nonBlockingIO/blockIO.js",
+    "nonBlockingIO": "node stage/nonBlockingIO/nonBlockIO.js"
   },
-  "keywords": ["nodejs"],
+  "keywords": [
+    "nodejs"
+  ],
   "author": "wtw",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^7.1.4"
+  }
 }
