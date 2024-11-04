@@ -6,7 +6,8 @@
   "scripts": {
     "desc": "node ./stage/desc/index.js",
     "game": "node ./stage/game/index.js",
-    "specification": "node ./stage/specification/index.js"
+    "specification": "node ./stage/specification/index.js",
+    "game-specification": "node ./stage/game-specification/index.js"
   },
   "keywords": ["nodejs"],
   "author": "wtw",
