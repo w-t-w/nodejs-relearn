@@ -7,10 +7,11 @@
     "desc": "node ./stage/desc/index.js",
     "game": "node ./stage/game/index.js",
     "specification": "node ./stage/specification/index.js",
-    "game-specification": "node ./stage/game-specification/index.js",
+    "game-specification": "node ./stage/gameSpecification/index.js",
     "blockingIO": "node stage/nonBlockingIO/blockIO.js",
     "nonBlockingIO": "node stage/nonBlockingIO/nonBlockIO.js",
-    "callback": "node stage/callback/index.js"
+    "callback": "node stage/callback/index.js",
+    "controlModule": "node stage/controlModule/index.js"
   },
   "keywords": [
     "nodejs"

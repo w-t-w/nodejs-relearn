@@ -1,4 +1,4 @@
-const game = require('./lib');
+const game = require('./game');
 
 let count = 0;
 
