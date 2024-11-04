@@ -3,7 +3,7 @@ const glob = require("glob");
 let result = null;
 
 console.time('glob');
-glob(`${process.cwd()}/**/*`, (err, data) => {
+glob(`${process.cwd()}/**/*`, function callback(err, data) {
     result = data;
     console.log('got result:', result);
 });
