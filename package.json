@@ -17,7 +17,8 @@
     "promiseAll": "node stage/promiseAll/index.js",
     "asyncAwait": "node stage/asyncAwait/index.js",
     "http": "node stage/http/index.js",
-    "http-page": "node stage/http-page/index.js"
+    "httpPage": "node stage/httpPage/index.js",
+    "gameHttp": "node stage/gameHttp/index.js"
   },
   "keywords": [
     "nodejs"

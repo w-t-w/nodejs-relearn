@@ -10,7 +10,7 @@ const server = http.createServer((request, response) => {
         response.end();
         return false;
     }
-    response.writeHead(200);
+    response.writeHead(200, {'content-type': 'text/html'});
     fs.createReadStream(path.resolve(__dirname, './index.html')).pipe(response);
 });
 
