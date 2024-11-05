@@ -8,6 +8,11 @@ const computerRandom = Math.floor(Math.random() * 3);
 
 const gameSelections = ["scissor", "rock", "paper"];
 
+if (!gameSelections.includes(playerAction)) {
+    console.error("玩家猜拳游戏输入不符合要求!请重试!");
+    process.exit(0);
+}
+
 const computerAction = gameSelections[computerRandom];
 
 position = computerRandom + 1;

@@ -2,8 +2,13 @@
 module.exports = function game(playerAction) {
     const computerRandom = Math.floor(Math.random() * 3);
 
-    const gameSelection = ["scissor", "rock", "paper"];
-    const gameLength = gameSelection.length;
+    const gameSelection = ["scissor", "rock", "paper"],
+        gameLength = gameSelection.length;
+
+    if (!gameSelection.includes(playerAction)) {
+        console.error("玩家猜拳游戏输入不符合要求!请重试!");
+        process.exit(0);
+    }
 
     const computerAction = gameSelection[computerRandom];
 

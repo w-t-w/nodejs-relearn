@@ -12,7 +12,7 @@ process.stdin.on("data", data => {
         count++;
     }
     if (count === 3) {
-        console.log("你太厉害了!我不跟你玩儿了!");
+        console.error("你太厉害了!我不跟你玩儿了!");
         process.exit(0);
     }
     console.log("请继续出示你的猜拳:");
