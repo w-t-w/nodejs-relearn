@@ -11,7 +11,8 @@
     "blockingIO": "node stage/nonBlockingIO/blockIO.js",
     "nonBlockingIO": "node stage/nonBlockingIO/nonBlockIO.js",
     "callback": "node stage/callback/index.js",
-    "controlModule": "node stage/controlModule/index.js"
+    "controlModule": "node stage/controlModule/index.js",
+    "eventLoop": "node stage/eventLoop/index.js"
   },
   "keywords": [
     "nodejs"
