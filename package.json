@@ -15,7 +15,9 @@
     "eventLoop": "node stage/eventLoop/index.js",
     "promise": "node stage/promise/index.js",
     "promiseAll": "node stage/promiseAll/index.js",
-    "asyncAwait": "node stage/asyncAwait/index.js"
+    "asyncAwait": "node stage/asyncAwait/index.js",
+    "http": "node stage/http/index.js",
+    "http-page": "node stage/http-page/index.js"
   },
   "keywords": [
     "nodejs"
