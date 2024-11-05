@@ -11,8 +11,8 @@ interview(1, function (error_first, result_first) {
                 return console.error(`cry at ${error_third.round} round!`);
             }
             console.log('smile!');
-        })
-    })
+        });
+    });
 });
 
 function interview(round, callback) {
