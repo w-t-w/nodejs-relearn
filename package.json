@@ -12,7 +12,10 @@
     "nonBlockingIO": "node stage/nonBlockingIO/nonBlockIO.js",
     "callback": "node stage/callback/index.js",
     "controlModule": "node stage/controlModule/index.js",
-    "eventLoop": "node stage/eventLoop/index.js"
+    "eventLoop": "node stage/eventLoop/index.js",
+    "promise": "node stage/promise/index.js",
+    "promiseAll": "node stage/promiseAll/index.js",
+    "asyncAwait": "node stage/asyncAwait/index.js"
   },
   "keywords": [
     "nodejs"

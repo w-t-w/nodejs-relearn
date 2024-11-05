@@ -29,7 +29,6 @@ interview(function (err, result) {
     }
     console.log('smile!', result);
 });
-
 function interview(callback) {
     const probability = Math.random();
     const timer = setTimeout(function () {
