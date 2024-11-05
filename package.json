@@ -11,6 +11,7 @@
     "blockingIO": "node stage/nonBlockingIO/blockIO.js",
     "nonBlockingIO": "node stage/nonBlockingIO/nonBlockIO.js",
     "callback": "node stage/callback/index.js",
+    "callbackMutiple": "node stage/callbackMutiple/index.js",
     "controlModule": "node stage/controlModule/index.js",
     "eventLoop": "node stage/eventLoop/index.js",
     "promise": "node stage/promise/index.js",
