@@ -52,7 +52,6 @@ gameKoa.use(async function (ctx) {
         const timer = setTimeout(function () {
             const result = game(action);
 
-            // if (playerWonCode === result) playerWonCount++;
             if (playerWonCode === result) ctx.playerWon = true;
 
             response.status = 200;
