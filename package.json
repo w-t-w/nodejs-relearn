@@ -22,7 +22,9 @@
     "gameHttp": "node stage/gameHttp/index.js",
     "gameExpress": "node stage/gameExpress/index.js",
     "gameKoa": "node stage/gameKoa/index.js",
-    "rpcBasic": "node stage/rpcBasic/index.js"
+    "rpcBasic": "node stage/rpcBasic/index.js",
+    "rpcSimpleServer": "node stage/rpcSimple/server.js",
+    "rpcSimpleClient": "node stage/rpcSimple/client.js"
   },
   "keywords": [
     "nodejs"
