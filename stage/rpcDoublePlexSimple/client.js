@@ -34,9 +34,9 @@ const LESSON_IDS = [
 
 const lesson_id_length = LESSON_IDS.length;
 
-let index = Math.floor(Math.random() * lesson_id_length),
+let index = 0,
     seq = 0,
-    id = LESSON_IDS[index];
+    id = null;
 
 socket.on("data", function (buffer) {
     const {seq, data} = decode(buffer);

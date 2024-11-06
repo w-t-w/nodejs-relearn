@@ -28,7 +28,9 @@
     "rpcHalfDoublePlexServer": "node stage/rpcHalfDoublePlex/server.js",
     "rpcHalfDoublePlexClient": "node stage/rpcHalfDoublePlex/client.js",
     "rpcDoublePlexSimpleServer": "node stage/rpcDoublePlexSimple/server.js",
-    "rpcDoublePlexSimpleClient": "node stage/rpcDoublePlexSimple/client.js"
+    "rpcDoublePlexSimpleClient": "node stage/rpcDoublePlexSimple/client.js",
+    "rpcDoublePlexServer": "node stage/rpcDoublePlex/server.js",
+    "rpcDoublePlexClient": "node stage/rpcDoublePlex/client.js"
   },
   "keywords": [
     "nodejs"
