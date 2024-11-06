@@ -51,9 +51,10 @@
         布
     </button>
 </section>
-<script type="application/javascript">
+<script type="text/javascript">
     const operationButtons = document.getElementsByClassName("operation-button");
     const outputContainer = document.getElementById("output");
+
     [...operationButtons].forEach(function (operationButton) {
         operationButton.addEventListener("click", function (e) {
             const target = e.target;
@@ -63,7 +64,7 @@
                     return response.text();
                 })
                 .then(function (text) {
-                    outputContainer.innerHTML += `${text}<br/>`
+                    outputContainer.innerHTML += `${text}<br/>`;
                 })
                 .catch(function (error) {
                     console.error(error);
