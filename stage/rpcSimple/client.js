@@ -1,7 +1,6 @@
 const net = require('net');
 
 const SERVER_HOST = '127.0.0.1';
-const PORT = 3000;
 const SERVER_PORT = 4000;
 
 const socket = new net.Socket({});
