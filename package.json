@@ -21,7 +21,8 @@
     "httpPage": "node stage/httpPage/index.js",
     "gameHttp": "node stage/gameHttp/index.js",
     "gameExpress": "node stage/gameExpress/index.js",
-    "gameKoa": "node stage/gameKoa/index.js"
+    "gameKoa": "node stage/gameKoa/index.js",
+    "rpcBasic": "node stage/rpcBasic/index.js"
   },
   "keywords": [
     "nodejs"
@@ -32,6 +33,7 @@
     "express": "^4.21.1",
     "glob": "^7.1.4",
     "koa": "^2.15.3",
-    "koa-mount": "^4.0.0"
+    "koa-mount": "^4.0.0",
+    "protocol-buffers": "^5.0.0"
   }
 }
