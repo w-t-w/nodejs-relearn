@@ -26,6 +26,7 @@ const LESSON_DATA = {
 
 const server = net.createServer(function (socket) {
     socket.on("data", function (buffer) {
+        console.log(buffer);
         setTimeout(function () {
             const {seq, data: lesson_id} = decode(buffer);
             socket.write(encode(seq, LESSON_DATA[lesson_id]));

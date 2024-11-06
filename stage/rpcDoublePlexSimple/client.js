@@ -40,7 +40,7 @@ let index = 0,
 
 socket.on("data", function (buffer) {
     const {seq, data} = decode(buffer);
-    console.log(`包头 ${seq} 所代表的课程 id 为 ${id} 的课程名称为 ${data}`);
+    console.log(`包头 ${seq} 所代表的课程名称为 ${data}`);
 });
 
 function encode(id) {
@@ -48,7 +48,7 @@ function encode(id) {
     header.writeInt32BE(seq);
     const body = Buffer.alloc(4);
     body.writeInt32BE(id);
-    console.log(`包头 ${seq} 所代表的课程 id 为 ${id}`);
+    console.log(`包头 ${seq} 所代表的课程 ID 为 ${id}`);
     seq++;
     return Buffer.concat([header, body]);
 }
@@ -68,4 +68,4 @@ for (let i = 0; i < 200; i++) {
     id = LESSON_IDS[index];
     socket.write(encode(id));
 }
-// }, 1000);
+// }, 50);

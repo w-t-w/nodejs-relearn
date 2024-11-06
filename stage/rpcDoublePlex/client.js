@@ -47,7 +47,7 @@ socket.on("data", function (buffer) {
         const package = buffer.slice(0, packageLength);
         buffer = buffer.slice(packageLength);
         const {seq, data} = decode(package);
-        console.log(`包头为 ${seq} 的课程名称为 ${data}`);
+        console.log(`包头为 ${seq} 所代表的课程名称为 ${data}`);
     }
     oldBuffer = buffer;
 });
@@ -75,7 +75,7 @@ function encode(id) {
     body.writeInt32BE(id);
     const body_length = body.length;
     header.writeInt32BE(body_length, 4);
-    console.log(`包头为 ${seq} 的课程 ID 为 ${id}`);
+    console.log(`包头为 ${seq} 所代表的课程 ID 为 ${id}`);
     seq++;
     return Buffer.concat([header, body]);
 }
