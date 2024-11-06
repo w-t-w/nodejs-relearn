@@ -28,14 +28,20 @@ app.use("/favicon.ico", function (request, response) {
     return false;
 });
 
-app.use("/game", function (request, response) {
-    const {action} = request.query;
-
+app.use("/game", function (request, response, next) {
     if (playerWonCount >= 3 || errorCode === 9) {
         response.status(500);
         response.send("你太厉害了!!!我不跟你玩儿了!!!");
         return false;
     }
+
+    next();
+
+    if (response.playerWon) playerWonCount++
+});
+
+app.use("/game", function (request, response) {
+    const {action} = request.query;
 
     if (!action || playerSameCount >= 3) {
         response.status(400);
@@ -51,12 +57,15 @@ app.use("/game", function (request, response) {
     }
     playerLastAction = action;
 
+    // const timer = setTimeout(() => {
     const result = game(action);
 
-    if (result === playerWon) playerWonCount++;
+    if (result === playerWon) response.playerWon = true;
 
     response.status(200);
     response.send(resultConfig[result]);
+    // clearTimeout(timer);
+    // }, 100);
 });
 
 app.use("/", function (request, response) {
