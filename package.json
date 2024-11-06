@@ -19,7 +19,8 @@
     "asyncAwait": "node stage/asyncAwait/index.js",
     "http": "node stage/http/index.js",
     "httpPage": "node stage/httpPage/index.js",
-    "gameHttp": "node stage/gameHttp/index.js"
+    "gameHttp": "node stage/gameHttp/index.js",
+    "gameExpress": "node stage/gameExpress/index.js"
   },
   "keywords": [
     "nodejs"
@@ -27,6 +28,7 @@
   "author": "wtw",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.21.1",
     "glob": "^7.1.4"
   }
 }
