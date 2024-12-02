@@ -30,7 +30,11 @@
     "rpcDoublePlexSimpleServer": "node stage/rpcDoublePlexSimple/server.js",
     "rpcDoublePlexSimpleClient": "node stage/rpcDoublePlexSimple/client.js",
     "rpcDoublePlexServer": "node stage/rpcDoublePlex/server.js",
-    "rpcDoublePlexClient": "node stage/rpcDoublePlex/client.js"
+    "rpcDoublePlexClient": "node stage/rpcDoublePlex/client.js",
+    "download": "node stage/download/index.js",
+    "template": "node stage/template/index.js",
+    "detail": "node stage/detail/index.js",
+    "detailServer": "node stage/detail/server/index.js"
   },
   "keywords": [
     "nodejs"
@@ -42,6 +46,7 @@
     "glob": "^7.1.4",
     "koa": "^2.15.3",
     "koa-mount": "^4.0.0",
+    "koa-static": "^5.0.0",
     "protocol-buffers": "^5.0.0"
   }
 }
