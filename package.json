@@ -32,6 +32,7 @@
     "rpcDoublePlexServer": "node stage/rpcDoublePlex/server.js",
     "rpcDoublePlexClient": "node stage/rpcDoublePlex/client.js",
     "download": "node stage/download/index.js",
+    "templateSimple": "node stage/templateSimple/index.js",
     "template": "node stage/template/index.js",
     "detail": "node stage/detail/index.js",
     "detailServer": "node stage/detail/server/index.js"
