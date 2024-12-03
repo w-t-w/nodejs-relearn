@@ -43,6 +43,7 @@
   "author": "wtw",
   "license": "MIT",
   "dependencies": {
+    "easy_sock": "^0.4.1",
     "express": "^4.21.1",
     "glob": "^7.1.4",
     "koa": "^2.15.3",
