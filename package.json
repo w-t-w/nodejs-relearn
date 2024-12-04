@@ -35,7 +35,9 @@
     "templateSimple": "node stage/templateSimple/index.js",
     "template": "node stage/template/index.js",
     "detail": "node stage/detail/index.js",
-    "detailServer": "node stage/detail/server/index.js"
+    "detailServer": "node stage/detail/server/index.js",
+    "graphql": "node stage/graphql/app.js",
+    "graphqlSchema": "node stage/graphqlSchema/index.js"
   },
   "keywords": [
     "nodejs"
@@ -46,7 +48,9 @@
     "easy_sock": "^0.4.1",
     "express": "^4.21.1",
     "glob": "^7.1.4",
+    "graphql": "^16.9.0",
     "koa": "^2.15.3",
+    "koa-graphql": "^0.12.0",
     "koa-mount": "^4.0.0",
     "koa-static": "^5.0.0",
     "protocol-buffers": "^5.0.0"
