@@ -37,7 +37,8 @@
     "detail": "node stage/detail/index.js",
     "detailServer": "node stage/detail/server/index.js",
     "graphql": "node stage/graphql/app.js",
-    "graphqlSchema": "node stage/graphqlSchema/index.js"
+    "graphqlSchema": "node stage/graphqlSchema/index.js",
+    "video": "node stage/video/index.js"
   },
   "keywords": [
     "nodejs"
