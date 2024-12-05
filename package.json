@@ -38,7 +38,12 @@
     "detailServer": "node stage/detail/server/index.js",
     "graphql": "node stage/graphql/app.js",
     "graphqlSchema": "node stage/graphqlSchema/index.js",
-    "video": "node stage/video/index.js"
+    "video": "node stage/video/index.js",
+    "list-components": "webpack --config=./stage/list/components/webpack.components.js --color",
+    "list-frontend": "webpack --config=./stage/list/frontend/webpack.web.js --color",
+    "list-backend": "webpack --config=./stage/list/backend/webpack.ssr.js --color",
+    "list-server":  "node ./stage/list/backend/server/index.js",
+    "list-client": "node ./stage/list/backend/client/index.js"
   },
   "keywords": [
     "nodejs"
@@ -54,6 +59,19 @@
     "koa-graphql": "^0.12.0",
     "koa-mount": "^4.0.0",
     "koa-static": "^5.0.0",
-    "protocol-buffers": "^5.0.0"
+    "protocol-buffers": "^5.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "babel-loader": "^9.2.1",
+    "core-js": "^3.39.0",
+    "webpack": "^5.97.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-devserver": "^0.0.6"
   }
 }
