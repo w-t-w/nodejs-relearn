@@ -43,7 +43,11 @@
     "list-frontend": "webpack --config=./stage/list/frontend/webpack.web.js --color",
     "list-backend": "webpack --config=./stage/list/backend/webpack.ssr.js --color",
     "list-server":  "node ./stage/list/backend/server/index.js",
-    "list-client": "node ./stage/list/backend/client/index.js"
+    "list-client": "node ./stage/list/backend/client/index.js",
+    "child-process": "node ./stage/childProcess/index.js",
+    "downloadSimple": "node ./stage/downloadSimple/index.js",
+    "cluster": "node ./stage/cluster/index.js",
+    "daemon": "node ./stage/daemon/index.js"
   },
   "keywords": [
     "nodejs"

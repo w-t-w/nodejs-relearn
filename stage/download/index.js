@@ -6,13 +6,15 @@ const path = require('path');
 
 const PORT = 3000;
 
-const SOURCE_DIR = path.join(__dirname, './source');
+const SOURCE_DIR = path.join(__dirname, './source/static');
 const TEMPLATE_DIR = path.resolve(__dirname, './source/index.html');
+
+const buffer = fs.readFileSync(TEMPLATE_DIR);
 
 const koa = new Koa();
 
 koa.use(
-    KoaStatic(SOURCE_DIR)
+    KoaMount('/static', KoaStatic(SOURCE_DIR))
 );
 
 koa.use(
@@ -26,7 +28,8 @@ koa.use(
 koa.use(
     KoaMount("/", async function ({response}) {
         response.status = 200;
-        response.body = fs.readFileSync(TEMPLATE_DIR, "utf-8");
+        response.type = 'html';
+        response.body = buffer;
     })
 );
 

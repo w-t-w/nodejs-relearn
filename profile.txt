@@ -1,0 +1,379 @@
+Statistical profiling result from isolate-0x128008000-22770-v8.log, (2072 ticks, 1981 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     55    2.7%          /usr/local/bin/node
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      3    0.1%    0.1%  Builtin: Call_ReceiverIsNullOrUndefined_Baseline_Compact
+      2    0.1%    0.1%  JS: ^onwrite node:internal/streams/writable:615:17
+      2    0.1%    0.1%  Builtin: Call_ReceiverIsNullOrUndefined
+      2    0.1%    0.1%  Builtin: CallFunction_ReceiverIsNullOrUndefined
+      1    0.0%    0.0%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.0%    0.0%  JS: ^wrappedFn node:internal/errors:535:21
+      1    0.0%    0.0%  JS: ^set node:internal/streams/writable:262:8
+      1    0.0%    0.0%  JS: ^resolve node:path:1162:10
+      1    0.0%    0.0%  JS: ^removeListener node:events:680:28
+      1    0.0%    0.0%  JS: ^parserOnIncoming node:_http_server:1037:26
+      1    0.0%    0.0%  JS: ^parserOnHeadersComplete node:_http_common:71:33
+      1    0.0%    0.0%  JS: ^noop node:internal/util/debuglog:57:14
+      1    0.0%    0.0%  JS: ^next node:internal/per_context/primordials:331:9
+      1    0.0%    0.0%  JS: ^matchKnownFields node:_http_incoming:276:26
+      1    0.0%    0.0%  JS: ^listener /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/ee-first@1.1.1/node_modules/ee-first/index.js:80:18
+      1    0.0%    0.0%  JS: ^isURL node:internal/url:771:15
+      1    0.0%    0.0%  JS: ^hasAsyncIdStack node:internal/async_hooks:533:25
+      1    0.0%    0.0%  JS: ^get status /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/response.js:73:13
+      1    0.0%    0.0%  JS: ^afterWrite node:internal/streams/writable:699:20
+      1    0.0%    0.0%  JS: ^_send node:_http_outgoing:398:49
+      1    0.0%    0.0%  JS: ^Readable.resume node:internal/streams/readable:1227:37
+      1    0.0%    0.0%  JS: ^Readable.push node:internal/streams/readable:387:35
+      1    0.0%    0.0%  JS: ^<anonymous> node:internal/modules/cjs/loader:1040:24
+      1    0.0%    0.0%  JS: *set node:internal/streams/writable:262:8
+      1    0.0%    0.0%  JS: *get node:internal/streams/writable:1010:8
+      1    0.0%    0.0%  JS: *get node:_http_incoming:109:16
+      1    0.0%    0.0%  JS: *first /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/ee-first@1.1.1/node_modules/ee-first/index.js:24:15
+      1    0.0%    0.0%  JS: *emit node:events:465:44
+      1    0.0%    0.0%  Builtin: Call_ReceiverIsAny
+      1    0.0%    0.0%  Builtin: CallFunction_ReceiverIsNotNullOrUndefined
+      1    0.0%    0.0%  Builtin: CallFunction_ReceiverIsAny
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     36    1.7%    1.8%  JavaScript
+      0    0.0%    0.0%  C++
+     92    4.4%    4.6%  GC
+     55    2.7%          Shared libraries
+   1981   95.6%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1981   95.6%  UNKNOWN
+    592   29.9%    JS: ^byteLength node:buffer:770:20
+    306   51.7%      JS: ^set body /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/response.js:135:11
+    306  100.0%        JS: ^<anonymous> /Users/wtw/Zone/nodejs-relearn/stage/download/index.js:27:34
+    223   72.9%          JS: ^dispatch /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-compose@4.1.0/node_modules/koa-compose/index.js:35:23
+    223  100.0%            JS: ^<anonymous> /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-mount@4.0.0/node_modules/koa-mount/index.js:48:25
+     83   27.1%          JS: *dispatch /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-compose@4.1.0/node_modules/koa-compose/index.js:35:23
+     83  100.0%            JS: ^<anonymous> /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-mount@4.0.0/node_modules/koa-mount/index.js:48:25
+    284   48.0%      JS: ^write_ node:_http_outgoing:938:16
+    284  100.0%        JS: ^end node:_http_outgoing:1080:45
+    284  100.0%          JS: ^respond /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:256:17
+    284  100.0%            JS: ^handleResponse /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:184:28
+    591   29.8%    JS: ^writevGeneric node:internal/stream_base_commons:121:23
+    591  100.0%      JS: ^Socket._writeGeneric node:net:926:42
+    590   99.8%        JS: ^Socket._writev node:net:963:36
+    590  100.0%          JS: ^doWrite node:internal/streams/writable:587:17
+    590  100.0%            JS: ^clearBuffer node:internal/streams/writable:744:21
+    515   26.0%    JS: ^readFileSync node:fs:434:22
+    510   99.0%      JS: ^<anonymous> /Users/wtw/Zone/nodejs-relearn/stage/download/index.js:27:34
+    387   75.9%        JS: ^dispatch /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-compose@4.1.0/node_modules/koa-compose/index.js:35:23
+    387  100.0%          JS: ^<anonymous> /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-mount@4.0.0/node_modules/koa-mount/index.js:48:25
+    387  100.0%            JS: ^dispatch /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-compose@4.1.0/node_modules/koa-compose/index.js:35:23
+    123   24.1%        JS: *dispatch /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-compose@4.1.0/node_modules/koa-compose/index.js:35:23
+    123  100.0%          JS: ^<anonymous> /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-mount@4.0.0/node_modules/koa-mount/index.js:48:25
+    123  100.0%            JS: *dispatch /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-compose@4.1.0/node_modules/koa-compose/index.js:35:23
+     41    2.1%    JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+     37   90.2%      JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      3    8.1%        JS: ~<anonymous> node:internal/streams/duplex:1:1
+      3  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      3  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      3    8.1%        JS: ~<anonymous> node:internal/fs/promises:1:1
+      3  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      3  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      3    8.1%        JS: ~<anonymous> node:http:1:1
+      3  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      3  100.0%            JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      3    8.1%        JS: ~<anonymous> node:crypto:1:1
+      3  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      3  100.0%            JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      2    5.4%        JS: ~<anonymous> node:tty:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      2  100.0%            JS: ~<anonymous> /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/debug@4.3.7/node_modules/debug/src/node.js:1:1
+      2    5.4%        JS: ~<anonymous> node:net:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      2    5.4%        JS: ~<anonymous> node:internal/fs/streams:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      2    5.4%        JS: ~<anonymous> node:_http_client:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      2    5.4%        JS: ~<anonymous> /Users/wtw/Zone/nodejs-relearn/stage/download/index.js:1:1
+      2  100.0%          JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.7%        JS: ~<anonymous> node:stream:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/streams/readable:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/streams/pipeline:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/streams/operators:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/streams/compose:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/crypto/hkdf:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/crypto/cipher:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/cluster/primary:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/child_process:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/assert/assertion_error:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:cluster:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:child_process:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:_http_common:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      2    4.9%      JS: ^<anonymous> node:internal/modules/cjs/loader:1040:24
+      1   50.0%        JS: ^wrapModuleLoad node:internal/modules/cjs/loader:211:24
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1332:36
+      1  100.0%            JS: ^require node:internal/modules/helpers:140:19
+      1   50.0%        JS: ^traceSync node:diagnostics_channel:313:12
+      1  100.0%          JS: ^wrapModuleLoad node:internal/modules/cjs/loader:211:24
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1332:36
+      1    2.4%      JS: ~<anonymous> /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/debug@4.3.7/node_modules/debug/src/node.js:1:1
+      1  100.0%        JS: ~<anonymous> /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/debug@4.3.7/node_modules/debug/src/index.js:1:1
+      1  100.0%          JS: ~<anonymous> /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:1:1
+      1  100.0%            JS: ~<anonymous> /Users/wtw/Zone/nodejs-relearn/stage/download/index.js:1:1
+      1    2.4%      JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      1  100.0%        JS: ^loadBuiltinModule node:internal/modules/helpers:106:27
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1040:24
+      1  100.0%            JS: ^traceSync node:diagnostics_channel:313:12
+
+     55    2.7%  /usr/local/bin/node
+      4    7.3%    /usr/local/bin/node
+      1   25.0%      JS: ~toIdentifier /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/toidentifier@1.0.1/node_modules/toidentifier/index.js:24:23
+      1  100.0%        JS: ~forEachCode /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/http-errors@1.8.1/node_modules/http-errors/index.js:265:38
+      1  100.0%          /usr/local/bin/node
+      1  100.0%            JS: ~populateConstructorExports /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/http-errors@1.8.1/node_modules/http-errors/index.js:264:37
+      1   25.0%      JS: ~ServerResponse node:_http_server:195:24
+      1  100.0%        JS: ~parserOnIncoming node:_http_server:1037:26
+      1  100.0%          JS: ~parserOnHeadersComplete node:_http_common:71:33
+      1   25.0%      JS: ^onParserExecuteCommon node:_http_server:914:31
+      1  100.0%        JS: ^onParserExecute node:_http_server:841:25
+      1   25.0%      /usr/local/bin/node
+      1  100.0%        JS: *processTicksAndRejections node:internal/process/task_queues:72:35
+      2    3.6%    JS: ^wrappedFn node:internal/errors:535:21
+      1   50.0%      JS: ^setHeader node:_http_outgoing:697:57
+      1  100.0%        JS: ^set /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/response.js:466:6
+      1  100.0%          JS: ^set type /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/response.js:315:11
+      1  100.0%            JS: ^set body /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/response.js:135:11
+      1   50.0%      JS: ^resolve node:path:1162:10
+      1  100.0%        JS: ^realpathSync node:fs:2629:22
+      1  100.0%          JS: ^toRealPath node:internal/modules/helpers:64:20
+      1  100.0%            JS: ^tryFile node:internal/modules/cjs/loader:521:17
+      2    3.6%    JS: ^resolve node:path:1162:10
+      1   50.0%      JS: ^readPackage node:internal/modules/package_json_reader:99:21
+      1  100.0%        JS: ^tryPackage node:internal/modules/cjs/loader:479:20
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:690:28
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1163:35
+      1   50.0%      JS: ^<anonymous> node:internal/modules/cjs/loader:690:28
+      1  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1163:35
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1040:24
+      1  100.0%            JS: ^wrapModuleLoad node:internal/modules/cjs/loader:211:24
+      2    3.6%    JS: ^resOnFinish node:_http_server:977:21
+      2  100.0%      JS: *emit node:events:465:44
+      2  100.0%        JS: ^onFinish node:_http_outgoing:1075:18
+      2  100.0%          JS: ^callback node:internal/streams/writable:764:63
+      2  100.0%            JS: ^afterWrite node:internal/streams/writable:699:20
+      2    3.6%    JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1   50.0%      JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1  100.0%        JS: ~<anonymous> node:internal/child_process:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1   50.0%      JS: ^<anonymous> node:internal/modules/cjs/loader:1040:24
+      1  100.0%        JS: ^traceSync node:diagnostics_channel:313:12
+      1  100.0%          JS: ^wrapModuleLoad node:internal/modules/cjs/loader:211:24
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1332:36
+      2    3.6%    JS: ^Socket.read node:net:771:33
+      1   50.0%      JS: ^flow node:internal/streams/readable:1280:14
+      1  100.0%        JS: ^resume_ node:internal/streams/readable:1254:17
+      1  100.0%          JS: *processTicksAndRejections node:internal/process/task_queues:72:35
+      1   50.0%      JS: ^Socket node:net:359:16
+      1  100.0%        JS: ^onconnection node:net:2199:22
+      2    3.6%    JS: ^Duplex node:internal/streams/duplex:65:16
+      2  100.0%      JS: ^Socket node:net:359:16
+      2  100.0%        JS: ^onconnection node:net:2199:22
+      1    1.8%    JS: ~writeHead node:_http_server:341:19
+      1  100.0%      JS: ~_implicitHeader node:_http_server:336:68
+      1  100.0%        JS: ~write_ node:_http_outgoing:938:16
+      1  100.0%          JS: ~end node:_http_outgoing:1080:45
+      1  100.0%            JS: ~respond /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:256:17
+      1    1.8%    JS: ~onevent /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/ee-first@1.1.1/node_modules/ee-first/index.js:81:26
+      1  100.0%      JS: ^emit node:events:465:44
+      1  100.0%        JS: ~onFinish node:_http_outgoing:1075:18
+      1  100.0%          JS: ^callback node:internal/streams/writable:764:63
+      1  100.0%            JS: ^afterWrite node:internal/streams/writable:699:20
+      1    1.8%    JS: ^writeHead node:_http_server:341:19
+      1  100.0%      JS: ^_implicitHeader node:_http_server:336:68
+      1  100.0%        JS: ^write_ node:_http_outgoing:938:16
+      1  100.0%          JS: ^end node:_http_outgoing:1080:45
+      1  100.0%            JS: ^respond /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:256:17
+      1    1.8%    JS: ^undestroy node:internal/streams/destroy:173:19
+      1  100.0%      JS: ^initSocketHandle node:net:315:26
+      1  100.0%        JS: ^Socket node:net:359:16
+      1  100.0%          JS: ^onconnection node:net:2199:22
+      1    1.8%    JS: ^set type /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/response.js:315:11
+      1  100.0%      JS: ^set body /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/response.js:135:11
+      1  100.0%        JS: ^<anonymous> /Users/wtw/Zone/nodejs-relearn/stage/download/index.js:27:34
+      1  100.0%          JS: ^dispatch /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-compose@4.1.0/node_modules/koa-compose/index.js:35:23
+      1  100.0%            JS: ^<anonymous> /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-mount@4.0.0/node_modules/koa-mount/index.js:48:25
+      1    1.8%    JS: ^realpathSync node:fs:2629:22
+      1  100.0%      JS: ^toRealPath node:internal/modules/helpers:64:20
+      1  100.0%        JS: ^tryFile node:internal/modules/cjs/loader:521:17
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:690:28
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1163:35
+      1    1.8%    JS: ^pushAsyncContext node:internal/async_hooks:539:26
+      1  100.0%      JS: ^emitBeforeScript node:internal/async_hooks:509:26
+      1  100.0%        JS: ^processTicksAndRejections node:internal/process/task_queues:72:35
+      1    1.8%    JS: ^processTicksAndRejections node:internal/process/task_queues:72:35
+      1    1.8%    JS: ^parserOnIncoming node:_http_server:1037:26
+      1  100.0%      JS: ^parserOnHeadersComplete node:_http_common:71:33
+      1    1.8%    JS: ^parserOnHeadersComplete node:_http_common:71:33
+      1    1.8%    JS: ^onconnection node:net:2199:22
+      1    1.8%    JS: ^onFinish node:_http_outgoing:1075:18
+      1  100.0%      JS: ^callback node:internal/streams/writable:764:63
+      1  100.0%        JS: ^afterWrite node:internal/streams/writable:699:20
+      1  100.0%          JS: ^onwrite node:internal/streams/writable:615:17
+      1  100.0%            JS: ^onWriteComplete node:internal/stream_base_commons:81:25
+      1    1.8%    JS: ^isFinished /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/on-finished@2.4.1/node_modules/on-finished/index.js:66:21
+      1  100.0%      JS: ^onFinished /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/on-finished@2.4.1/node_modules/on-finished/index.js:46:21
+      1  100.0%        JS: ^handleRequest /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:180:16
+      1  100.0%          JS: ^handleRequest /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:154:27
+      1  100.0%            JS: *emit node:events:465:44
+      1    1.8%    JS: ^initSocketHandle node:net:315:26
+      1  100.0%      JS: ^Socket node:net:359:16
+      1  100.0%        JS: ^onconnection node:net:2199:22
+      1    1.8%    JS: ^get writable /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/response.js:530:15
+      1  100.0%      JS: *<anonymous> /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/delegates@1.0.0/node_modules/delegates/index.js:71:40
+      1  100.0%        JS: ^respond /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:256:17
+      1  100.0%          JS: ^handleResponse /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:184:28
+      1  100.0%            /usr/local/bin/node
+      1    1.8%    JS: ^get node:internal/streams/writable:230:8
+      1  100.0%      JS: ^get node:internal/streams/writable:1010:8
+      1  100.0%        JS: ^_flush node:_http_outgoing:1188:51
+      1  100.0%          JS: ^assignSocket node:_http_server:281:62
+      1  100.0%            JS: ^parserOnIncoming node:_http_server:1037:26
+      1    1.8%    JS: ^get headerSent /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/response.js:226:17
+      1  100.0%      JS: ^set /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/response.js:466:6
+      1  100.0%        JS: ^set type /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/response.js:315:11
+      1  100.0%          JS: ^set body /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/response.js:135:11
+      1  100.0%            JS: ^<anonymous> /Users/wtw/Zone/nodejs-relearn/stage/download/index.js:27:34
+      1    1.8%    JS: ^first /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/ee-first@1.1.1/node_modules/ee-first/index.js:24:15
+      1  100.0%      JS: ^attachFinishedListener /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/on-finished@2.4.1/node_modules/on-finished/index.js:91:33
+      1  100.0%        JS: ^attachListener /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/on-finished@2.4.1/node_modules/on-finished/index.js:141:25
+      1  100.0%          JS: ^onFinished /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/on-finished@2.4.1/node_modules/on-finished/index.js:46:21
+      1  100.0%            JS: ^handleRequest /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:180:16
+      1    1.8%    JS: ^end node:_http_outgoing:1080:45
+      1  100.0%      JS: ^respond /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:256:17
+      1  100.0%        JS: ^handleResponse /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:184:28
+      1  100.0%          /usr/local/bin/node
+      1  100.0%            JS: *processTicksAndRejections node:internal/process/task_queues:72:35
+      1    1.8%    JS: ^emitBeforeScript node:internal/async_hooks:509:26
+      1  100.0%      JS: ^processTicksAndRejections node:internal/process/task_queues:72:35
+      1    1.8%    JS: ^emitAfterScript node:internal/async_hooks:517:25
+      1  100.0%      JS: ^processTicksAndRejections node:internal/process/task_queues:72:35
+      1    1.8%    JS: ^doWrite node:internal/streams/writable:587:17
+      1  100.0%      JS: ^clearBuffer node:internal/streams/writable:744:21
+      1  100.0%        JS: ^Writable.uncork node:internal/streams/writable:520:37
+      1  100.0%          JS: ^end node:_http_outgoing:1080:45
+      1  100.0%            JS: ^respond /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:256:17
+      1    1.8%    JS: ^destroy node:internal/streams/destroy:49:17
+      1  100.0%      JS: ^Writable.destroy node:internal/streams/writable:1114:38
+      1  100.0%        JS: ^onceWrapper node:events:627:21
+      1  100.0%          JS: *emit node:events:465:44
+      1  100.0%            JS: ^finish node:internal/streams/writable:949:16
+      1    1.8%    JS: ^clearIncoming node:_http_server:964:23
+      1  100.0%      JS: ^resOnFinish node:_http_server:977:21
+      1  100.0%        JS: *emit node:events:465:44
+      1  100.0%          JS: ^onFinish node:_http_outgoing:1075:18
+      1  100.0%            JS: ^callback node:internal/streams/writable:764:63
+      1    1.8%    JS: ^clearBuffer node:internal/streams/writable:744:21
+      1  100.0%      JS: ^Writable.uncork node:internal/streams/writable:520:37
+      1  100.0%        JS: ^end node:_http_outgoing:1080:45
+      1  100.0%          JS: ^respond /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:256:17
+      1  100.0%            JS: ^handleResponse /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:184:28
+      1    1.8%    JS: ^attachListener /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/on-finished@2.4.1/node_modules/on-finished/index.js:141:25
+      1  100.0%      JS: ^onFinished /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/on-finished@2.4.1/node_modules/on-finished/index.js:46:21
+      1  100.0%        JS: ^handleRequest /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:180:16
+      1  100.0%          JS: ^handleRequest /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:154:27
+      1  100.0%            JS: *emit node:events:465:44
+      1    1.8%    JS: ^_storeHeader node:_http_outgoing:454:22
+      1  100.0%      JS: ^writeHead node:_http_server:341:19
+      1  100.0%        JS: ^_implicitHeader node:_http_server:336:68
+      1  100.0%          JS: ^write_ node:_http_outgoing:938:16
+      1  100.0%            JS: ^end node:_http_outgoing:1080:45
+      1    1.8%    JS: ^_implicitHeader node:_http_server:336:68
+      1  100.0%      JS: ^write_ node:_http_outgoing:938:16
+      1  100.0%        JS: ^end node:_http_outgoing:1080:45
+      1  100.0%          JS: ^respond /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:256:17
+      1  100.0%            JS: ^handleResponse /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:184:28
+      1    1.8%    JS: ^_dump node:_http_incoming:429:49
+      1  100.0%      JS: ^resOnFinish node:_http_server:977:21
+      1  100.0%        JS: *emit node:events:465:44
+      1  100.0%          JS: ^onFinish node:_http_outgoing:1075:18
+      1  100.0%            JS: ^callback node:internal/streams/writable:764:63
+      1    1.8%    JS: ^Writable.write node:internal/streams/writable:504:36
+      1  100.0%      JS: ^_writeRaw node:_http_outgoing:424:19
+      1  100.0%        JS: ^_send node:_http_outgoing:398:49
+      1  100.0%          JS: ^end node:_http_outgoing:1080:45
+      1  100.0%            JS: ^respond /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:256:17
+      1    1.8%    JS: ^Socket._writeGeneric node:net:926:42
+      1  100.0%      JS: ^Socket._writev node:net:963:36
+      1  100.0%        JS: ^doWrite node:internal/streams/writable:587:17
+      1  100.0%          JS: ^clearBuffer node:internal/streams/writable:744:21
+      1  100.0%            JS: ^Writable.uncork node:internal/streams/writable:520:37
+      1    1.8%    JS: ^ServerResponse node:_http_server:195:24
+      1  100.0%      JS: ^parserOnIncoming node:_http_server:1037:26
+      1  100.0%        JS: ^parserOnHeadersComplete node:_http_common:71:33
+      1    1.8%    JS: ^Readable.removeListener node:internal/streams/readable:1159:45
+      1  100.0%      JS: ^cleanup /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/ee-first@1.1.1/node_modules/ee-first/index.js:58:19
+      1  100.0%        JS: ^onFinish /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/on-finished@2.4.1/node_modules/on-finished/index.js:96:21
+      1  100.0%          JS: ^callback /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/ee-first@1.1.1/node_modules/ee-first/index.js:53:20
+      1  100.0%            JS: ^onevent /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/ee-first@1.1.1/node_modules/ee-first/index.js:81:26
+      1    1.8%    JS: ^<anonymous> node:internal/per_context/primordials:383:32
+      1  100.0%      JS: ^processPromiseRejections node:internal/process/promises:439:34
+      1  100.0%        JS: *processTicksAndRejections node:internal/process/task_queues:72:35
+      1    1.8%    JS: ^<anonymous> node:internal/modules/cjs/loader:873:37
+      1  100.0%      JS: ^<anonymous> node:internal/modules/cjs/loader:1299:33
+      1  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1040:24
+      1  100.0%          JS: ^traceSync node:diagnostics_channel:313:12
+      1  100.0%            JS: ^wrapModuleLoad node:internal/modules/cjs/loader:211:24
+      1    1.8%    JS: ^<anonymous> /Users/wtw/Zone/nodejs-relearn/stage/download/index.js:27:34
+      1  100.0%      JS: *dispatch /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-compose@4.1.0/node_modules/koa-compose/index.js:35:23
+      1  100.0%        JS: ^<anonymous> /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-mount@4.0.0/node_modules/koa-mount/index.js:48:25
+      1  100.0%          JS: *dispatch /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-compose@4.1.0/node_modules/koa-compose/index.js:35:23
+      1  100.0%            JS: ^<anonymous> /Users/wtw/Zone/nodejs-relearn/node_modules/.pnpm/koa-mount@4.0.0/node_modules/koa-mount/index.js:48:25
+
