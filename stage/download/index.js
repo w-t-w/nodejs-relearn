@@ -4,6 +4,8 @@ const KoaStatic = require('koa-static');
 const fs = require('fs');
 const path = require('path');
 
+const leak = [];
+
 const PORT = 3000;
 
 const SOURCE_DIR = path.join(__dirname, './source/static');
@@ -28,8 +30,9 @@ koa.use(
 koa.use(
     KoaMount("/", async function ({response}) {
         response.status = 200;
-        response.type = 'html';
-        response.body = buffer;
+        // response.type = 'html';
+        leak.push(fs.readFileSync(TEMPLATE_DIR, 'utf-8'));
+        response.body = fs.readFileSync(TEMPLATE_DIR, 'utf-8');
     })
 );
 
